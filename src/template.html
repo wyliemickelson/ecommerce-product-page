@@ -12,7 +12,74 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Ecommerce Product Page</title>
+    <title>Frontend Mentor | E-commerce product page</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="basic-flex">
+          <img class="icon" src="/src/images/icon-menu.svg" />
+          <img src="/src/images/logo.svg" />
+  
+          <div class="nav_links">
+            <a>Collections</a>
+            <a>Men</a>
+            <a>Women</a>
+            <a>About</a>
+            <a>Contact</a>
+          </div>
+        </div>
+
+        <div class="nav_account">
+          <img class="icon" src="/src/images/icon-cart.svg" />
+          <img src="/src/images/image-avatar.png" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product_images">
+        <div class="images_main">
+          <img class="icon" src="/src/images/icon-previous.svg">
+          <img src="/src/images/image-product-1.jpg" />
+          <img class="icon" src="/src/images/icon-next.svg">
+        </div>
+
+        <div class="images_thumbnails">
+          <img src="/src/images/image-product-1-thumbnail.jpg" />
+          <img src="/src/images/image-product-2-thumbnail.jpg" />
+          <img src="/src/images/image-product-3-thumbnail.jpg" />
+          <img src="/src/images/image-product-4-thumbnail.jpg" />
+        </div>
+      </section>
+
+      <section class="product_details">
+        <div class="details_text">
+          <p>Sneaker Company</p>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+
+        <div class="details_prices">
+          <p>$125.00</p>
+          <p>50%</p>
+          <p>$250.00</p>
+        </div>
+
+        <div>
+          <div class="details_count">
+            <img class="icon" src="/src/images/icon-minus.svg" />
+            <p>0</p>
+            <img class="icon" src="/src/images/icon-plus.svg" />
+          </div>
+          <button class="details_addToCartBtn">Add to cart</button>
+        </div>
+
+      </section>
+    </main>
+  </body>
 </html>
