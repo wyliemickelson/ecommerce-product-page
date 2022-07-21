@@ -1,0 +1,117 @@
+@use '/src/scss/config' as *;
+
+.images_main {
+  position: relative;
+  max-height: 325px;
+  overflow: hidden;
+
+  .image--main {
+    object-fit: cover; 
+  }
+
+  .icon--container {
+    position: absolute;
+    transform: translateY(-100%);
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+
+    .icon {
+      width: 0.5rem;
+    }
+  }
+
+  .icon--container--left {
+    left: 1rem;
+  }
+
+  .icon--container--right {
+    right: 1rem;
+  }
+}
+
+.product_details {
+  width: 90%;
+}
+
+.details_text {
+  margin: 1rem 0;
+
+  //margin on children with sibling
+  > * + * {
+    margin-top: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.1;
+  }
+
+  .text_brand {
+    color: $clr-prim-main;
+    font-weight: $font-weight-bold;
+    font-size: 0.8rem;
+  }
+}
+
+.details_prices {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .price {
+    font-weight: $font-weight-bold;
+  }
+
+  .price--current {
+    color: $clr-nt-800;
+    font-size: 1.5rem;
+  }
+
+  .price--old {
+    color: $clr-nt-200;
+    text-decoration: line-through;
+  }
+
+  .price--deal {
+    color: $clr-prim-main;
+    background-color: $clr-prim-light;
+    padding: 0 0.35em;
+    border-radius: 0.25rem;
+  }
+}
+
+.details_actions {
+  flex-direction: column;
+
+  .action {
+    border-radius: 0.5rem;
+    font-weight: $font-weight-bold;
+    width: 100%;
+    padding: 0.75rem 0;
+    height: 3rem;
+  }
+
+  .action_btn {
+    background-color: inherit;
+    width: 3rem;
+  }
+
+  .actions_count {
+    background-color: $clr-nt-150;
+    justify-content: space-around;
+    
+    p {
+      color: $clr-nt-800;
+    }
+  }
+
+  .actions_addBtn {
+    background-color: $clr-prim-main;
+    color: $clr-prim-light;
+    justify-content: center;
+  }
+}

@@ -1,16 +1,21 @@
-@use 'config' as *;
+@use '/src/scss/config' as *;
 
 html {
   font-size: $font-size-default;
   font-weight: $font-weight-default;
+  line-height: 1.4;
 }
 
 * {
   font-family: $ff-prim;
-  color: $clr-nt-800;
+  color: $clr-nt-400;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  color: $clr-nt-800;
 }
 
 img {
@@ -21,14 +26,29 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  background-color: white;
+}
+
+.center {
+  margin: 0 auto;
+}
+
 .icon {
   max-width: 1.7rem;
+}
+
+.icon--white {
+  filter: brightness(0) invert(1);
+  max-width: 15px;
 }
 
 .basic-flex {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1rem;
 }
 
 .nav_links,

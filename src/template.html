@@ -15,10 +15,10 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="basic-flex">
-          <button><img class="icon" src="/src/images/icon-menu.svg" /></button>
+    <header class="header center">
+      <nav class="nav basic-flex">
+        <div class="left_menu basic-flex">
+          <button class="icon--menu"><img class="icon" src="/src/images/icon-menu.svg" /></button>
           <img src="/src/images/logo.svg" />
   
           <div class="nav_links basic-flex">
@@ -40,9 +40,9 @@
     <main>
       <section class="product_images">
         <div class="images_main">
-          <img class="icon" src="/src/images/icon-previous.svg">
-          <img src="/src/images/image-product-1.jpg" />
-          <img class="icon" src="/src/images/icon-next.svg">
+          <button class="icon--container icon--container--left"><img class="icon" src="/src/images/icon-previous.svg"></button>
+          <img class="image--main" src="/src/images/image-product-1.jpg" />
+          <button class="icon--container icon--container--right"><img class="icon" src="/src/images/icon-next.svg"></button>
         </div>
 
         <div class="images_thumbnails">
@@ -53,9 +53,9 @@
         </div>
       </section>
 
-      <section class="product_details">
+      <section class="product_details center">
         <div class="details_text">
-          <p>SNEAKER COMPANY</p>
+          <p class="text_brand">SNEAKER COMPANY</p>
           <h1>Fall Limited Edition Sneakers</h1>
           <p>
             These low-profile sneakers are your perfect casual wear companion.
@@ -64,20 +64,22 @@
           </p>
         </div>
 
-        <div class="details_prices">
-          <p>$125.00</p>
-          <p>50%</p>
-          <p>$250.00</p>
+        <div class="details_prices basic-flex">
+          <div class="basic-flex">
+            <p class="price price--current">$125.00</p>
+            <p class="price price--deal">50%</p>
+          </div>
+          <p class="price price--old">$250.00</p>
         </div>
 
-        <div>
-          <div class="details_count basic-flex">
-            <img class="icon" src="/src/images/icon-minus.svg" />
+        <div class="details_actions basic-flex">
+          <div class="action actions_count basic-flex">
+            <button class="action_btn"><img class="icon" src="/src/images/icon-minus.svg" /></button>
             <p>0</p>
-            <img class="icon" src="/src/images/icon-plus.svg" />
+            <button class="action_btn"><img class="icon" src="/src/images/icon-plus.svg" /></button>
           </div>
-          <button class="details_addToCartBtn">
-            <img class="icon" src="/src/images/icon-cart.svg">
+          <button class="action actions_addBtn basic-flex">
+            <img class="icon icon--white" src="/src/images/icon-cart.svg">
             Add to cart
           </button>
         </div>

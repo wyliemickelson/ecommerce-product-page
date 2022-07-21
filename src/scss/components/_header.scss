@@ -1,0 +1,17 @@
+@use '/src/scss/config' as *;
+
+.header {
+  width: 90%;
+  padding: 0.75rem 0 1.25rem 0;
+}
+
+.nav {
+  justify-content: space-between;
+
+  .icon--menu {
+    height: 16px;
+  }
+  .left_menu {
+    align-items: flex-end;
+  }
+}
