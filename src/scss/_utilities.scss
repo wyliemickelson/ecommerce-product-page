@@ -1,0 +1,37 @@
+@use 'config' as *;
+
+html {
+  font-size: $font-size-default;
+  font-weight: $font-weight-default;
+}
+
+* {
+  font-family: $ff-prim;
+  color: $clr-nt-800;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  max-width: 1.7rem;
+}
+
+.basic-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav_links,
+.images_thumbnails {
+  display: none;
+}
