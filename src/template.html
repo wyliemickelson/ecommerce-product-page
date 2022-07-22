@@ -15,13 +15,15 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <div class="page-mask hidden"></div>
+    <div id="pageMask" class="page-mask hidden"></div>
     <header class="header center">
       <nav class="nav basic-flex">
         <div class="left_menu basic-flex">
-          <button class="icon--menu"><img class="icon" src="/src/images/icon-menu.svg" /></button>
+          <button class="icon--menu">
+            <img class="icon" src="/src/images/icon-menu.svg" />
+          </button>
           <img src="/src/images/logo.svg" />
-  
+
           <div class="nav_links basic-flex">
             <a>Collections</a>
             <a>Men</a>
@@ -41,16 +43,33 @@
     <main class="product center">
       <section class="product_images">
         <div class="images_main">
-          <button class="icon--container icon--container--left"><img class="icon" src="/src/images/icon-previous.svg"></button>
-          <img class="image--main" src="/src/images/image-product-1.jpg" />
-          <button class="icon--container icon--container--right"><img class="icon" src="/src/images/icon-next.svg"></button>
+          <button class="icon--container icon--container--left">
+            <img class="icon" src="/src/images/icon-previous.svg" />
+          </button>
+          <button id="mainImg">
+            <img id="image_1" class="image--main visible" src="/src/images/image-product-1.jpg" />
+            <img id="image_2"class="image--main" src="/src/images/image-product-2.jpg" />
+            <img id="image_3"class="image--main" src="/src/images/image-product-3.jpg" />
+            <img id="image_4"class="image--main" src="/src/images/image-product-4.jpg" />
+          </button>
+          <button class="icon--container icon--container--right">
+            <img class="icon" src="/src/images/icon-next.svg" />
+          </button>
         </div>
 
         <div class="images_thumbnails">
-          <div class="thumbnail--container image--current"><img src="/src/images/image-product-1-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-2-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-3-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-4-thumbnail.jpg" /></div>
+          <div id="thumbnail_1" class="thumbnail--container image--current">
+            <img src="/src/images/image-product-1-thumbnail.jpg" />
+          </div>
+          <div id="thumbnail_2" class="thumbnail--container">
+            <img src="/src/images/image-product-2-thumbnail.jpg" />
+          </div>
+          <div id="thumbnail_3" class="thumbnail--container">
+            <img src="/src/images/image-product-3-thumbnail.jpg" />
+          </div>
+          <div id="thumbnail_4" class="thumbnail--container">
+            <img src="/src/images/image-product-4-thumbnail.jpg" />
+          </div>
         </div>
       </section>
 
@@ -75,33 +94,58 @@
 
         <div class="details_actions basic-flex">
           <div class="action actions_count basic-flex">
-            <button class="action_btn"><img class="icon" src="/src/images/icon-minus.svg" /></button>
+            <button class="action_btn">
+              <img class="icon" src="/src/images/icon-minus.svg" />
+            </button>
             <p>0</p>
-            <button class="action_btn"><img class="icon" src="/src/images/icon-plus.svg" /></button>
+            <button class="action_btn">
+              <img class="icon" src="/src/images/icon-plus.svg" />
+            </button>
           </div>
           <button class="action actions_addBtn basic-flex">
-            <img class="icon icon--white" src="/src/images/icon-cart.svg">
+            <img class="icon icon--white" src="/src/images/icon-cart.svg" />
             Add to cart
           </button>
         </div>
-
       </section>
     </main>
 
-      <section class="lightbox product_images hidden">
-        <div class="images_main">
-          <button class="icon--exit icon--white"><img src="/src/images/icon-close.svg"></button>
-          <button class="icon--container icon--container--left"><img class="icon" src="/src/images/icon-previous.svg"></button>
-          <img class="image--main" src="/src/images/image-product-1.jpg" />
-          <button class="icon--container icon--container--right"><img class="icon" src="/src/images/icon-next.svg"></button>
+    <section id="lightbox" class="lightbox product_images hidden">
+      <div class="images_main">
+        <button id="lightboxCloseBtn" class="icon--exit icon--white">
+          <img src="/src/images/icon-close.svg" />
+        </button>
+        <button class="icon--container icon--container--left">
+          <img class="icon" src="/src/images/icon-previous.svg" />
+        </button>
+        <!-- <img class="image--main" src="/src/images/image-product-1.jpg" /> -->
+
+        <div id="lightboxMainImg">
+          <img id="lightboxImage_1" class="image--main visible" src="/src/images/image-product-1.jpg" />
+          <img id="lightboxImage_2"class="image--main" src="/src/images/image-product-2.jpg" />
+          <img id="lightboxImage_3"class="image--main" src="/src/images/image-product-3.jpg" />
+          <img id="lightboxImage_4"class="image--main" src="/src/images/image-product-4.jpg" />
         </div>
 
-        <div class="images_thumbnails">
-          <div class="thumbnail--container image--current"><img src="/src/images/image-product-1-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-2-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-3-thumbnail.jpg" /></div>
-          <div class="thumbnail--container"><img src="/src/images/image-product-4-thumbnail.jpg" /></div>
+        <button class="icon--container icon--container--right">
+          <img class="icon" src="/src/images/icon-next.svg" />
+        </button>
+      </div>
+
+      <div class="images_thumbnails">
+        <div id="lightboxThumbnail_1" class="thumbnail--container image--current">
+          <img src="/src/images/image-product-1-thumbnail.jpg" />
         </div>
-      </section>
+        <div id="lightboxThumbnail_2" class="thumbnail--container">
+          <img src="/src/images/image-product-2-thumbnail.jpg" />
+        </div>
+        <div id="lightboxThumbnail_3" class="thumbnail--container">
+          <img src="/src/images/image-product-3-thumbnail.jpg" />
+        </div>
+        <div id="lightboxThumbnail_4" class="thumbnail--container">
+          <img src="/src/images/image-product-4-thumbnail.jpg" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
