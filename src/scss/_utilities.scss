@@ -31,6 +31,15 @@ button {
   background-color: white;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+a:hover {
+  border-bottom: 2px solid $clr-prim-main;
+  cursor: pointer;
+}
+
 .center {
   margin: 0 auto;
 }
@@ -41,7 +50,6 @@ button {
 
 .icon--white {
   filter: brightness(0) invert(1);
-  max-width: 15px;
 }
 
 .basic-flex {
@@ -54,4 +62,18 @@ button {
 .nav_links,
 .images_thumbnails {
   display: none;
+}
+
+.page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hidden {
+  display: none !important;
 }

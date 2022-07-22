@@ -39,10 +39,6 @@
     margin-top: 3.5rem;
     width: 70%;
     gap: 7rem;
-
-    img {
-      // border-radius: 0.75rem;
-    }
   }
 
   .product_images {
@@ -80,7 +76,7 @@
         border: 2px solid $clr-prim-main;
 
         img {
-          opacity: 30%;
+          filter: brightness(80%);
         }
       }
     }

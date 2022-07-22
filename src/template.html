@@ -15,6 +15,7 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
+    <div class="page-mask hidden"></div>
     <header class="header center">
       <nav class="nav basic-flex">
         <div class="left_menu basic-flex">
@@ -86,5 +87,21 @@
 
       </section>
     </main>
+
+      <section class="lightbox product_images hidden">
+        <div class="images_main">
+          <button class="icon--exit icon--white"><img src="/src/images/icon-close.svg"></button>
+          <button class="icon--container icon--container--left"><img class="icon" src="/src/images/icon-previous.svg"></button>
+          <img class="image--main" src="/src/images/image-product-1.jpg" />
+          <button class="icon--container icon--container--right"><img class="icon" src="/src/images/icon-next.svg"></button>
+        </div>
+
+        <div class="images_thumbnails">
+          <div class="thumbnail--container image--current"><img src="/src/images/image-product-1-thumbnail.jpg" /></div>
+          <div class="thumbnail--container"><img src="/src/images/image-product-2-thumbnail.jpg" /></div>
+          <div class="thumbnail--container"><img src="/src/images/image-product-3-thumbnail.jpg" /></div>
+          <div class="thumbnail--container"><img src="/src/images/image-product-4-thumbnail.jpg" /></div>
+        </div>
+      </section>
   </body>
 </html>

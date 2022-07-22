@@ -1,0 +1,38 @@
+.lightbox {
+  position: absolute;
+  min-width: 400px;
+  width: 40%;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  .images_main {
+    overflow: visible;
+
+    .icon--container {
+      display: initial;
+    }
+  }
+
+  .icon--container {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon--exit {
+    display: block;
+    margin-left: auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .icon--container--left {
+    left: -1.5rem;
+  }
+
+  .icon--container--right {
+    right: -1.5rem;
+  }
+}
