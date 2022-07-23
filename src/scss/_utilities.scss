@@ -81,3 +81,12 @@ a:hover {
 .visible {
   display: initial !important;
 }
+
+.black-bold {
+  color: $clr-nt-800;
+  font-weight: $font-weight-bold;
+}
+
+#mainImgContainer{
+  pointer-events: none;
+}

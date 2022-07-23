@@ -1,0 +1,50 @@
+@use '/src/scss/config' as *;
+
+.cart {
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  background-color: white;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  top: 4rem;
+  z-index: 1;
+  width: 90%;
+
+  .cart_header {
+    width: 100%;
+    border-bottom: 1px solid $clr-nt-200;
+    padding-bottom: 1rem;
+  }
+
+  .cart_item_container {
+    flex-direction: column;
+  }
+
+  .cart_item {
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+    
+    .item_text {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      overflow: hidden;
+
+      .item_name {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+
+    .item_thumbnail {
+      width: 3rem;
+      border-radius: 0.3rem;
+    }
+  }
+}

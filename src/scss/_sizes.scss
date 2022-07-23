@@ -1,6 +1,10 @@
 @use '/src/scss/config' as *;
 
 @media (min-width: 950px) {
+  #mainImgContainer{
+    pointer-events: all;
+  }
+
   .nav_links,
   .images_thumbnails {
     display: flex;

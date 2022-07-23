@@ -38,6 +38,15 @@
           <img class="icon" src="/src/images/image-avatar.png" />
         </div>
       </nav>
+
+      <section class="cart basic-flex hidden">
+        <p class="cart_header black-bold">Cart</p>
+        <div
+          id="cartItemContainer"
+          class="cart_item_container basic-flex"
+        ></div>
+        <button class="action actions_addBtn">Checkout</button>
+      </section>
     </header>
 
     <main class="product center">
@@ -46,7 +55,7 @@
           <button class="icon--container icon--container--left">
             <img class="icon" src="/src/images/icon-previous.svg" />
           </button>
-          <button id="mainImgContainer">
+          <div id="mainImgContainer">
             <img
               id="image_1"
               class="image--main visible"
@@ -67,7 +76,7 @@
               class="image--main"
               src="/src/images/image-product-4.jpg"
             />
-          </button>
+          </div>
           <button class="icon--container icon--container--right">
             <img class="icon" src="/src/images/icon-next.svg" />
           </button>
@@ -75,7 +84,10 @@
 
         <div class="images_thumbnails">
           <div id="thumbnail_1" class="thumbnail--container image--current">
-            <img src="/src/images/image-product-1-thumbnail.jpg" />
+            <img
+              id="firstThumbnail"
+              src="/src/images/image-product-1-thumbnail.jpg"
+            />
           </div>
           <div id="thumbnail_2" class="thumbnail--container">
             <img src="/src/images/image-product-2-thumbnail.jpg" />
@@ -92,7 +104,7 @@
       <section class="product_details center">
         <div class="details_text">
           <p class="text_brand">SNEAKER COMPANY</p>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1 id="itemName">Fall Limited Edition Sneakers</h1>
           <p class="text_desc">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
@@ -102,7 +114,9 @@
 
         <div class="details_prices basic-flex">
           <div class="basic-flex">
-            <p class="price price--current">$125.00</p>
+            <p id="currentPrice" class="price price--current black-bold">
+              $125.00
+            </p>
             <p class="price price--deal">50%</p>
           </div>
           <p class="price price--old">$250.00</p>
@@ -113,12 +127,12 @@
             <button class="action_btn">
               <img class="icon" src="/src/images/icon-minus.svg" />
             </button>
-            <p>0</p>
+            <p id="itemCount" class="black-bold">0</p>
             <button class="action_btn">
               <img class="icon" src="/src/images/icon-plus.svg" />
             </button>
           </div>
-          <button class="action actions_addBtn basic-flex">
+          <button id="addToCartBtn" class="action actions_addBtn basic-flex">
             <img class="icon icon--white" src="/src/images/icon-cart.svg" />
             Add to cart
           </button>

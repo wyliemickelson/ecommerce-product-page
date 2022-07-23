@@ -2,11 +2,21 @@
 
 .images_main {
   position: relative;
-  max-height: 325px;
+  height: 325px;
   overflow: hidden;
 
   .image--main {
     display: none;
+  }
+
+  #mainImgContainer {
+    
+
+    img {
+      object-fit: contain;
+      max-height: 400px;
+      width: 100%;
+    }
   }
 
   .icon--container {
@@ -17,8 +27,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 5rem;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid $clr-prim-light;
 
     .icon {
       width: 0.5rem;
@@ -26,11 +37,11 @@
   }
 
   .icon--container--left {
-    left: 1rem;
+    left: 5%;
   }
 
   .icon--container--right {
-    right: 1rem;
+    right: 5%;
   }
 }
 
@@ -79,7 +90,6 @@
   }
 
   .price--current {
-    color: $clr-nt-800;
     font-size: 1.5rem;
   }
 
@@ -96,34 +106,30 @@
   }
 }
 
+.action {
+  border-radius: 0.5rem;
+  font-weight: $font-weight-bold;
+  width: 100%;
+  padding: 0.75rem 0;
+  height: 3rem;
+}
+
+.action_btn {
+  background-color: inherit;
+  width: 3rem;
+}
+
+.actions_addBtn {
+  background-color: $clr-prim-main;
+  color: $clr-prim-light;
+  justify-content: center;
+}
+
 .details_actions {
   flex-direction: column;
-
-  .action {
-    border-radius: 0.5rem;
-    font-weight: $font-weight-bold;
-    width: 100%;
-    padding: 0.75rem 0;
-    height: 3rem;
-  }
-
-  .action_btn {
-    background-color: inherit;
-    width: 3rem;
-  }
 
   .actions_count {
     background-color: $clr-nt-150;
     justify-content: space-around;
-    
-    p {
-      color: $clr-nt-800;
-    }
-  }
-
-  .actions_addBtn {
-    background-color: $clr-prim-main;
-    color: $clr-prim-light;
-    justify-content: center;
   }
 }

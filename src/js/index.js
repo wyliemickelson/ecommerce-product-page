@@ -1,4 +1,6 @@
 import '/src/scss/index.scss';
+import { createCartItem } from './cart';
+import { getItemDetails } from './cart';
 
 const pageMask = document.getElementById('pageMask');
 const mainImgContainer = document.getElementById('mainImgContainer');
@@ -8,6 +10,11 @@ const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
 const thumbnailImages = Array.from(document.querySelectorAll('.thumbnail--container'));
 const imgRotateBtnsRight = Array.from(document.querySelectorAll('.icon--container--right'));
 const imgRotateBtnsLeft = Array.from(document.querySelectorAll('.icon--container--left'));
+
+const addToCartBtn = document.getElementById('addToCartBtn');
+const cartItemContainer = document.getElementById('cartItemContainer');
+
+addToCartBtn.addEventListener('click', handleAddToCartBtn);
 
 mainImgContainer.addEventListener('click', toggleLightBox);
 lightboxCloseBtn.addEventListener('click', toggleLightBox);
@@ -24,6 +31,14 @@ imgRotateBtnsLeft.forEach(button => button.addEventListener('click', () => {
 function toggleLightBox() {
 	lightbox.classList.toggle('hidden');
 	pageMask.classList.toggle('hidden');
+}
+
+function handleAddToCartBtn() {
+	let cartDetails = getItemDetails();
+	let cartItemHTML = createCartItem(cartDetails);
+	let cartItem = document.createElement('div');
+	cartItem.innerHTML = cartItemHTML;
+	cartItemContainer.append(cartItem);
 }
 
 function handleImgRotation(direction) {
