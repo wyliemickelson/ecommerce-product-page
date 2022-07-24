@@ -34,18 +34,23 @@
         </div>
 
         <div class="nav_account basic-flex">
-          <button><img class="icon" src="/src/images/icon-cart.svg" /></button>
+          <button id="showCartBtn">
+            <img class="icon" src="/src/images/icon-cart.svg" />
+          </button>
           <img class="icon" src="/src/images/image-avatar.png" />
         </div>
       </nav>
 
-      <section class="cart basic-flex hidden">
+      <section id="cart" class="cart basic-flex hidden">
         <p class="cart_header black-bold">Cart</p>
+        <p id="cartTextEmpty" class="cart_text--empty">Your cart is empty.</p>
         <div
           id="cartItemContainer"
           class="cart_item_container basic-flex"
         ></div>
-        <button class="action actions_addBtn">Checkout</button>
+        <button id="checkoutBtn" class="action actions_addBtn hidden">
+          Checkout
+        </button>
       </section>
     </header>
 
@@ -124,11 +129,11 @@
 
         <div class="details_actions basic-flex">
           <div class="action actions_count basic-flex">
-            <button class="action_btn">
+            <button id="countDecrement" class="action_btn">
               <img class="icon" src="/src/images/icon-minus.svg" />
             </button>
             <p id="itemCount" class="black-bold">0</p>
-            <button class="action_btn">
+            <button id="countIncrement" class="action_btn">
               <img class="icon" src="/src/images/icon-plus.svg" />
             </button>
           </div>

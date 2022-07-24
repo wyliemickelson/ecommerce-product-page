@@ -1,5 +1,9 @@
 @use '/src/scss/config' as *;
 
+main {
+  max-width: 650px;
+}
+
 .images_main {
   position: relative;
   height: 325px;
@@ -7,6 +11,10 @@
 
   .image--main {
     display: none;
+  }
+
+  #mainImgContainer:hover {
+    cursor: pointer;
   }
 
   .mainImgContainer {
@@ -131,5 +139,12 @@
   .actions_count {
     background-color: $clr-nt-150;
     justify-content: space-around;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
   }
 }

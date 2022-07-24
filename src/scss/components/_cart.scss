@@ -1,6 +1,7 @@
 @use '/src/scss/config' as *;
 
 .cart {
+  border: 1.5px solid $clr-prim-main;
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
@@ -11,6 +12,7 @@
   top: 4rem;
   z-index: 1;
   width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
   .cart_header {
     width: 100%;
@@ -20,6 +22,12 @@
 
   .cart_item_container {
     flex-direction: column;
+  }
+
+  .cart_text--empty {
+    align-self: center;
+    margin: 3rem 0 3.5rem 0;
+    font-weight: $font-weight-bold;
   }
 
   .cart_item {

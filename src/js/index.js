@@ -8,14 +8,24 @@ const thumbnailImages = Array.from(document.querySelectorAll('.thumbnail--contai
 const imgRotateBtnsRight = Array.from(document.querySelectorAll('.icon--container--right'));
 const imgRotateBtnsLeft = Array.from(document.querySelectorAll('.icon--container--left'));
 
+const showCartBtn = document.getElementById('showCartBtn');
 const addToCartBtn = document.getElementById('addToCartBtn');
+const cartSection = document.getElementById('cart');
 const cartItemContainer = document.getElementById('cartItemContainer');
+const itemCount = document.getElementById('itemCount');
+
+const lightbox = document.getElementById('lightbox');
+const pageMask = document.getElementById('pageMask');
+
+const countIncrementBtn = document.getElementById('countIncrement');
+const countDecrementBtn = document.getElementById('countDecrement');
 
 function initializeListeners() {
+	showCartBtn.addEventListener('click', () => pageManipulation.toggleHidden(cartSection));
 	addToCartBtn.addEventListener('click', handleAddToCartBtn);
 
-	mainImgContainer.addEventListener('click', pageManipulation.toggleLightBox);
-	lightboxCloseBtn.addEventListener('click', pageManipulation.toggleLightBox);
+	mainImgContainer.addEventListener('click', handleLightBox);
+	lightboxCloseBtn.addEventListener('click', handleLightBox);
 
 	thumbnailImages.forEach(thumbnail => thumbnail.addEventListener('click', handlemainImgContainerChange));
 
@@ -25,14 +35,28 @@ function initializeListeners() {
 	imgRotateBtnsLeft.forEach(button => button.addEventListener('click', () => {
 		handleImgRotation('left');
 	}));
+
+	countIncrementBtn.addEventListener('click', () => handleCountIncrement(1));
+	countDecrementBtn.addEventListener('click', () => handleCountIncrement(-1));
+}
+
+function handleLightBox() {
+	pageManipulation.toggleHidden(pageMask);
+	pageManipulation.toggleHidden(lightbox);
 }
 
 function handleAddToCartBtn() {
-	let cartDetails = cart.getItemDetails();
-	let cartItemHTML = cart.createCartItem(cartDetails);
+	if (Number(itemCount.textContent) === 0) return;
+	let itemDetails = cart.getItemDetails();
+	let cartItemHTML = cart.createCartItem(itemDetails);
 	let cartItem = document.createElement('div');
 	cartItem.innerHTML = cartItemHTML;
+
+	cartItem.querySelector('.cartItemDelBtn').addEventListener('click', handleCartItemDeletion);
+
 	cartItemContainer.append(cartItem);
+	pageManipulation.updateCart();
+	pageManipulation.showCart();
 }
 
 function handleImgRotation(direction) {
@@ -46,6 +70,15 @@ function handleImgRotation(direction) {
 function handlemainImgContainerChange() {
 	const newImgId = this.id.slice(-1);
 	pageManipulation.changeImage(newImgId);
+}
+
+function handleCountIncrement(amount) {
+	pageManipulation.editCount(amount);
+}
+
+function handleCartItemDeletion() {
+	this.closest('.cart_item').parentElement.remove();
+	pageManipulation.updateCart();
 }
 
 initializeListeners();
