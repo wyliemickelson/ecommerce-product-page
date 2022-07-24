@@ -52,9 +52,11 @@
 
     .images_main {
       max-height: none;
+      height: 100%;
 
       img {
         border-radius: 0.75rem;
+        object-fit: cover;
       }
 
       .icon--container {
